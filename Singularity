@@ -6,6 +6,7 @@ From: jupyter/minimal-notebook
 
 %post
     echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
+    add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main" && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates \
@@ -13,7 +14,7 @@ From: jupyter/minimal-notebook
         jq \
         git \
         iputils-ping \
-        libcurl3 \
+        libcurl4 \
         libicu55 \
         libunwind8 \
         netcat
