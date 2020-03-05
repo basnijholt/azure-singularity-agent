@@ -2,7 +2,7 @@ BootStrap: docker
 From: jupyter/minimal-notebook
 
 %files
-    start.sh /azp
+    start.sh /azp/start.sh
 
 %post
     echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
